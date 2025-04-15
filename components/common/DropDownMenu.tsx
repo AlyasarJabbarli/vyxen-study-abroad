@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { PlusIcon } from "@heroicons/react/20/solid";
+import { useActiveLink } from "@/hooks/useActiveLink";
 
 interface DropdownProps {
   label: string; // Button text (e.g., "Pages")
@@ -14,13 +14,8 @@ interface DropdownProps {
 
 const DropdownMenu: React.FC<DropdownProps> = ({ label, href, links, children }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const {isActive} = useActiveLink()
 
-  // Get the current pathname from the router
-  const pathname = usePathname();
-  // Check if the current pathname matches the href or starts with it
-  const isActive = href === '/' 
-  ? pathname === '/' 
-  : pathname.startsWith(href);
 
   return (
     <div
@@ -31,7 +26,7 @@ const DropdownMenu: React.FC<DropdownProps> = ({ label, href, links, children })
       {/* Dropdown Button */}
       <Link href={href} className="py-7 inline-block">
         <div
-          className={`inline-flex items-center gap-4 border px-5 py-1 rounded-sm border-border cursor-pointer  ${isActive ? "text-primary" : "text-secondary"}`}
+          className={`inline-flex items-center gap-4 border px-5 py-1 rounded-sm border-border cursor-pointer  ${isActive(href) ? "text-primary" : "text-secondary"}`}
         >
           <span className="text-sm">{label}</span>
           {
@@ -48,7 +43,7 @@ const DropdownMenu: React.FC<DropdownProps> = ({ label, href, links, children })
             <ul className="py-5">
               {links.map((link, index) => (
                   <li key={index} className="">
-                    <Link href={link.to} className={`block px-7 py-1.5 hover:text-primary duration-150 ${isActive ? "text-primary" : "text-secondary"}`}>
+                    <Link href={link.to} className={`block px-7 py-1.5 hover:text-primary duration-150 ${isActive(link.to) ? "text-primary" : "text-secondary"}`}>
                       {link.text}
                     </Link>
                   </li>

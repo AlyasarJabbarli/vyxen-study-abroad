@@ -14,8 +14,13 @@ interface DropdownProps {
 
 const DropdownMenu: React.FC<DropdownProps> = ({ label, href, links, children }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Get the current pathname from the router
   const pathname = usePathname();
-  const isActive = pathname.startsWith(href);
+  // Check if the current pathname matches the href or starts with it
+  const isActive = href === '/' 
+  ? pathname === '/' 
+  : pathname.startsWith(href);
 
   return (
     <div
@@ -26,23 +31,24 @@ const DropdownMenu: React.FC<DropdownProps> = ({ label, href, links, children })
       {/* Dropdown Button */}
       <Link href={href} className="py-7 inline-block">
         <div
-          className={`inline-flex items-center gap-4 border px-5 py-1 rounded-sm border-border cursor-pointer  ${isActive ? "font-bold text-primary" : "text-secondary"}`}
+          className={`inline-flex items-center gap-4 border px-5 py-1 rounded-sm border-border cursor-pointer  ${isActive ? "text-primary" : "text-secondary"}`}
         >
           <span className="text-sm">{label}</span>
-          <PlusIcon aria-hidden="true" className="size-3" />
+          {
+            links ?  <PlusIcon aria-hidden="true" className="size-3" /> : null
+          }
         </div>
       </Link>
 
       {/* Dropdown Items */}
-      <div className="relative h-full">
-        {isOpen && (
-          <div className={`absolute left-0 z-10 min-w-60 bg-white shadow-lg transition-opacity transform duration-300 ease-out ${isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
+      <div className="relative h-full ">
+        {isOpen && links &&(
+          <div className={`absolute left-0 z-10 min-w-60 bg-white shadow-lg animate-fade-up`}
           >
             <ul className="py-5">
-              {links &&
-                links.map((link, index) => (
+              {links.map((link, index) => (
                   <li key={index} className="">
-                    <Link href={link.to} className="block px-7 py-1.5 text-[#0f172A]">
+                    <Link href={link.to} className={`block px-7 py-1.5 hover:text-primary duration-150 ${isActive ? "text-primary" : "text-secondary"}`}>
                       {link.text}
                     </Link>
                   </li>

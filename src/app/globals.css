@@ -13,7 +13,9 @@
   --color-border: #EFF5F8;
   --color-border-dark: #0000000f;
   --color-green-1: #00CC99;
+  --color-blue-1: #0091FF;
   --color-background-light: #00000008;
+
   --color-background: #EDf3F5;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -137,4 +139,9 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+  @apply font-semibold;
 }

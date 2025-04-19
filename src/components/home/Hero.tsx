@@ -26,8 +26,8 @@ const Hero = () => {
                                 </ul>
                             </div>
                             <div className="mt-2 flex sm:flex-row flex-col">
-                                <Button children="Book Appointment" as="link" href="/contact" />
-                                <Button variant="outline" children="Read Story" as="link" href="/about" />
+                                <Button as="link" href="/contact">Book Appointment</Button>
+                                <Button variant="outline" as="link" href="/about">Read Story</Button>
                             </div>
                         </div>
                     </div>

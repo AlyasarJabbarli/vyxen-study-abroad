@@ -10,7 +10,7 @@ const Hero = () => {
                 <Container>
                     <div className="flex items-center h-full">
                         <div className="max-w-2xl">
-                            <div>
+                            <div data-aos="fade-up" data-aos-duration="1000">
                                 <h1 className="text-5xl sm:text-7xl">
                                     Immigration visa Consulting
                                 </h1>

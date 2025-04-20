@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <section>
 
-            <div className="bg-[url('/images/hero_bg.jpg')] bg-cover bg-center bg-no-repeat h-lvh max-h-[750px]">
+            <div className="bg-[url('/images/hero_bg.jpg')] bg-cover bg-center bg-no-repeat h-lvh max-h-[750px] min-h-max">
                 <Container>
                     <div className="flex items-center h-full">
                         <div className="max-w-2xl">

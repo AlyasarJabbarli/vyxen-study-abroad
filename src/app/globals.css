@@ -14,10 +14,15 @@
   --color-tgray: #787B84;
   --color-border: #EFF5F8;
   --color-border-dark: #0000000f;
-  --color-green-1: #00CC99;
-  --color-blue-1: #0091FF;
   --color-background-light: #00000008;
   --color-background-secondary: #F4F8FA;
+  
+  --color-green-1: #00CC99;
+  --color-blue-1: #0091FF;
+  --color-orange-1: #FE6C3F;
+  --color-violet-1: #897CB5;
+  --color-yellow-1: #FFBD0F;
+
   --shadow-card: 0px 14px 19px 0px rgba(221, 229, 236, 0.42);
   --color-background: #EDf3F5;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -145,7 +150,7 @@
 }
 
 
-h1,h2,h4,h5,h6 {
+h1,h2{
   @apply font-bold;
 }
 

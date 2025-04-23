@@ -9,19 +9,19 @@ interface SectionTitleProps {
     blackText,
     grayText,
     inline = false,
-    maxWidth = "max-w-2xl",
+    maxWidth = "max-w-4xl",
   }: SectionTitleProps) {
     return (
-      <div className={`w-full ${maxWidth}`}>
+      <div className={`w-full ${maxWidth}`} data-aos="slide-right" data-aos-duration="500" data-aos-easing="ease-out-back" data-delay="200">
         {inline ? (
-          <h2 className="text-5xl font-bold">
+          <h2 className="text-5xl/tight font-bold">
             <span className="text-black dark:text-white">{blackText} </span>
-            <span className="text-gray-500">{grayText}</span>
+            <span className="text-secondary">{grayText}</span>
           </h2>
         ) : (
           <div>
-            <h2 className="text-5xl font-bold text-black dark:text-white">{blackText}</h2>
-            <h2 className="text-5xl font-bold text-gray-500">{grayText}</h2>
+            <h2 className="text-5xl/tight font-bold text-black dark:text-white">{blackText}</h2>
+            <h2 className="text-5xl/tight font-bold text-secondary">{grayText}</h2>
           </div>
         )}
       </div>

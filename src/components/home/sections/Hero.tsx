@@ -1,6 +1,6 @@
 import { IoMdCheckmark } from "react-icons/io";
-import Button from "../common/Button";
-import Container from "../layout/Container";
+import Button from "../../common/Button";
+import Container from "../../layout/Container";
 
 const Hero = () => {
     return (

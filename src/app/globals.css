@@ -23,7 +23,14 @@
   --color-violet-1: #897CB5;
   --color-yellow-1: #FFBD0F;
 
+  --color-orange-background: #fff0eb;
+  --color-green-background: #00CC991A;
+  --color-blue-background: #1495F81A;
+  --color-yellow-background: #FFBB0F1A;
+
   --shadow-card: 0px 14px 19px 0px rgba(221, 229, 236, 0.42);
+  --shadow-card-dark: 0px 21px 32px 0px rgba(191, 191, 191, 0.23);
+
   --color-background: #EDf3F5;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);

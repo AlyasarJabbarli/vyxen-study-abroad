@@ -5,7 +5,7 @@ import NavBar from "./NavBar";
 const Header = () => {
     return (
         <header className="font-semibold">
-            <div className="bg-background-2 md:block hidden">
+            <div className="bg-background md:block hidden">
                 <Container>
                     <div className="flex justify-between items-center py-3">
                         <div className="flex items-end gap-2">

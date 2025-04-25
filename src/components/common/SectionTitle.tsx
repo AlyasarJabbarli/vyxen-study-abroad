@@ -9,7 +9,7 @@ interface SectionTitleProps {
     blackText,
     grayText,
     inline = false,
-    maxWidth = "max-w-4xl",
+    maxWidth = "max-w-8xl",
   }: SectionTitleProps) {
     return (
       <div className={`w-full ${maxWidth}`} data-aos="slide-right" data-aos-duration="500" data-aos-easing="ease-out-back" data-delay="200">

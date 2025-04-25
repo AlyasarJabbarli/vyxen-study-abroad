@@ -1,4 +1,4 @@
-# Visa Web Application
+# Vyxen Web Application
 
 A modern, responsive web application built with Next.js, Tailwind CSS, and ShadCN UI. The project features multiple custom components and utilizes animation libraries like AOS for smooth user experience.
 
@@ -6,7 +6,7 @@ A modern, responsive web application built with Next.js, Tailwind CSS, and ShadC
 
 - Next.js + TypeScript
 - Tailwind CSS for styling
-- ShadCN UI components (Radix-based)
+- HeroUI + ShadCN UI components (Radix-based)
 - Responsive layout and components
 - Reusable UI like Cards, Carousels, and Hero sections
 - Animated content with AOS (Animate on Scroll)
@@ -15,7 +15,7 @@ A modern, responsive web application built with Next.js, Tailwind CSS, and ShadC
 ## Pages
 
 - Home
-- Partners
+- About
 - More pages under development
 
 ## Setup

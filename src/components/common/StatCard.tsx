@@ -25,10 +25,10 @@ const StatCard = ({
     isThousand = false,
 }: StatCardProps) => {
     return (
-        <Card className={cn(`flex flex-col lg:flex-row items-center rounded-none gap-11 px-16 pt-6 pb-11 hover:shadow-card-dark hover:z-10 duration-200 relative`, className)}>
+        <Card className={cn(`flex flex-col lg:flex-row items-center sm:rounded-none sm:gap-11 px-10 sm:px-16 pt-6 pb-11 hover:shadow-card-dark hover:z-10 duration-200 relative`, className)}>
                 <div
                     className={cn(
-                        `w-28 h-28 rounded-full flex items-center justify-center before:h-24 before:w-1 before:absolute before:top-1/2 before:left-0 before:-translate-y-1/2`,
+                        `sm:w-28 sm:h-28 h-20 w-20 rounded-full flex items-center justify-center before:h-24 before:w-1 before:absolute before:top-1/2 before:left-0 before:-translate-y-1/2`,
                         iconBgColor, bg
                     )}
                 >
@@ -37,7 +37,7 @@ const StatCard = ({
 
 
             <CardContent className="p-0">
-                <h4 className="font-light text-7xl flex items-end gap-1">
+                <h4 className="font-light sm:text-7xl text-5xl flex justify-center sm:justify-start items-end gap-1">
                     <CountUp enableScrollSpy end={number} duration={2.5} />
                     {isThousand && "K"}
                     <span>+</span>

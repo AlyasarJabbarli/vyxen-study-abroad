@@ -13,7 +13,7 @@ const Successes = () => {
                             <SectionTitle blackText="Discovering Our Biggest Successes: The Stories" grayText="Behind Our Great Achievements" />
                             <SectionDescription textTop="Embarking on a journey to reunite families, we recently had the privilege of assisting a" textBottom="couple in securing their spouse's visa." />
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 max-w-5xl rounded-3xl ">
+                        <div className="grid grid-cols-1 gap-2.5 sm:gap-0 sm:grid-cols-2 max-w-5xl rounded-3xl ">
                             <StatCard
                                 number={20}
                                 label="Visa Categories"
